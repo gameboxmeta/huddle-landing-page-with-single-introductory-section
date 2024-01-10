@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  padding: 32px;
+  font-weight: 500;
+  min-height: 100vh;
+  max-width: 1280px;
+  row-gap: 36px;
+  align-items: center;
+  margin-inline: auto;
+  flex-direction: column;
+  background-size: contain;
+  color: hsl(0, 0%, 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: space-between;
+  font-family: "Open Sans", sans-serif;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url("./images/bg-desktop.svg");
+}
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hero {
+  gap: 32px;
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+.hero_content {
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 46px;
+  font-weight: 500;
+}
+p {
+  line-height: 150%;
+}
+button {
+  width: 150px;
+  cursor: pointer;
+  padding-block: 12px;
+  border-radius: 100vw;
+  color: hsl(257, 40%, 49%);
+  border: 1px solid transparent;
+  background: hsl(0, 0%, 100%);
+  transition: all 0.15s ease-in-out;
+  box-shadow: 1px 0px 10px hsl(0, 0%, 0%);
+}
+button:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(300, 69%, 71%);
+}
+
+footer {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-end;
+}
+
+footer svg {
+  cursor: pointer;
+  overflow: visible;
+  outline-offset: 6px;
+  border-radius: 100%;
+  color: hsl(0, 0%, 100%);
+  outline: 1px solid hsl(0, 0%, 100%);
+  transition: all 0.15s ease-in-out;
+}
+footer svg:hover {
+  color: hsl(300, 69%, 71%);
+  outline-color: hsl(300, 69%, 71%);
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("./images/bg-mobile.svg");
+    background-position: top center;
+  }
+  .logo-img {
+    width: 125px;
+  }
+  .hero {
+    text-align: center;
+    grid-template-columns: repeat(1, 100%);
+  }
+  .hero_content {
+    align-items: center;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
